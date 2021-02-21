@@ -1,0 +1,13 @@
+# config.yaml
+wpdb:
+  name: dbXX
+  username: dbXX
+  userpass: dbXX
+site:
+  url: XX.local
+  port: 8480
+  name: sf__wordpress_experimental
+wpuser:
+  name: odmin
+  pass: XXX
+  email: XXX@gmail.com

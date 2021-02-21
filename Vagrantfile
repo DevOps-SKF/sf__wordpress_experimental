@@ -1,19 +1,23 @@
 # -*- mode: ruby -*-
 # vi: set ft=ruby :
 
-####### Customize your settings
 
-wpdbname = "dbwpsf"
-wpdbusername = "dbuwpsf"
-wpdbuserpass = "dbuPaSF21"
+####### Load settings
 
-siteurl = "skfwp.local"
-siteport = "8480"
-sitename = "sf__wordpress_experimental"
+current_dir    = File.dirname(File.expand_path(__FILE__))
+configs        = YAML.load_file("#{current_dir}/config.yaml")
 
-wpusername = "odmin"
-wpuserpass = "WPaSF21"
-wpemail = "razumov@gmail.com"
+wpdbname = configs['wpdb']['name']
+wpdbusername = configs['wpdb']['username']
+wpdbuserpass = configs['wpdb']['userpass']
+
+siteurl = configs['site']['url']
+siteport = configs['site']['port']
+sitename = configs['site']['name']
+
+wpusername = configs['wpuser']['name']
+wpuserpass = configs['wpuser']['pass']
+wpemail = configs['wpuser']['email']
 
 wwwdir = "/var/www/html"
 
